@@ -15,7 +15,7 @@ public class Assignment1 {
 
     private final Logger logger = LoggerFactory.getLogger(Assignment1.class);
 
-    @Scheduled(initialDelay = 0, fixedDelay = Integer.MAX_VALUE)
+//    @Scheduled(initialDelay = 0, fixedDelay = Integer.MAX_VALUE)
     public void run1() throws IOException {
         logger.info("Starting 1a...");
         final List<Long> numbers = FileReader.readLongs("/1a");
@@ -24,7 +24,7 @@ public class Assignment1 {
         logger.info("1a: " + pair);
     }
 
-    @Scheduled(initialDelay = 0, fixedDelay = Integer.MAX_VALUE)
+//    @Scheduled(initialDelay = 0, fixedDelay = Integer.MAX_VALUE)
     public void run2() throws IOException {
         logger.info("Starting 1b...");
         final List<Long> numbers = FileReader.readLongs("/1a");
