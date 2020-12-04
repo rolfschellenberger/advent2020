@@ -1,23 +1,23 @@
-package com.rolf.advent2020.util;
+package com.rolf.advent2020.password;
 
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-public class PasswordParser2 {
+public class PasswordParser {
 
     private static final Pattern PATTERN = Pattern.compile("(\\d+)-(\\d+) (\\w+): (\\w+)");
 
-    private PasswordParser2() {
+    private PasswordParser() {
     }
 
-    public static Password2 parse(final String input) {
+    public static Password parse(final String input) {
         final Matcher matcher = PATTERN.matcher(input);
         if (matcher.matches()) {
-            final int position1 = Integer.parseInt(matcher.group(1));
-            final int position2 = Integer.parseInt(matcher.group(2));
+            final int minCount = Integer.parseInt(matcher.group(1));
+            final int maxCount = Integer.parseInt(matcher.group(2));
             final String character = matcher.group(3);
             final String password = matcher.group(4);
-            return new Password2(password, new LetterRequirements2(character.charAt(0), position1, position2));
+            return new Password(password, new LetterRequirements(character.charAt(0), minCount, maxCount));
         }
         throw new RuntimeException("Invalid input to parse: " + input);
     }

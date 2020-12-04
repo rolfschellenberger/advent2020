@@ -1,9 +1,12 @@
 package com.rolf.advent2020;
 
+import com.rolf.advent2020.password.Password;
+import com.rolf.advent2020.password.Password2;
+import com.rolf.advent2020.password.PasswordParser;
+import com.rolf.advent2020.password.PasswordParser2;
 import com.rolf.advent2020.util.*;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Component;
 
 import java.io.IOException;

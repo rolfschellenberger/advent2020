@@ -1,9 +1,10 @@
 package com.rolf.advent2020;
 
+import com.rolf.advent2020.expense.NumberPair;
+import com.rolf.advent2020.expense.Sum;
 import com.rolf.advent2020.util.FileReader;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Component;
 
 import java.io.IOException;

@@ -1,4 +1,4 @@
-package com.rolf.advent2020.util;
+package com.rolf.advent2020.map;
 
 import com.rolf.advent2020.map.Location;
 import com.rolf.advent2020.map.Structure;

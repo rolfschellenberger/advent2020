@@ -1,4 +1,4 @@
-package com.rolf.advent2020;
+package com.rolf.advent2020.expense;
 
 import java.util.Arrays;
 import java.util.List;

@@ -1,11 +1,11 @@
-package com.rolf.advent2020.util;
+package com.rolf.advent2020.password;
 
-public class Password2 {
+public class Password {
 
+    private final LetterRequirements requirements;
     private final String password;
-    private final LetterRequirements2 requirements;
 
-    public Password2(final String password, final LetterRequirements2 requirements) {
+    public Password(final String password, final LetterRequirements requirements) {
         this.password = password;
         this.requirements = requirements;
     }

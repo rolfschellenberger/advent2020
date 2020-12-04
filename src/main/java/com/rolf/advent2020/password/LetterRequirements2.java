@@ -1,4 +1,4 @@
-package com.rolf.advent2020.util;
+package com.rolf.advent2020.password;
 
 public class LetterRequirements2 {
 

@@ -1,7 +1,4 @@
-package com.rolf.advent2020.util;
-
-import com.rolf.advent2020.map.Location;
-import com.rolf.advent2020.map.Map;
+package com.rolf.advent2020.map;
 
 import java.util.ArrayList;
 import java.util.List;
