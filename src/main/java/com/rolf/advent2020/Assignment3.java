@@ -2,7 +2,6 @@ package com.rolf.advent2020;
 
 import com.rolf.advent2020.map.*;
 import com.rolf.advent2020.util.FileReader;
-import com.rolf.advent2020.map.MapParser;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Component;
@@ -17,7 +16,7 @@ public class Assignment3 {
 
     private final Logger logger = LoggerFactory.getLogger(Assignment3.class);
 
-//    @Scheduled(initialDelay = 0, fixedDelay = Integer.MAX_VALUE)
+    //    @Scheduled(initialDelay = 0, fixedDelay = Integer.MAX_VALUE)
     public void run1() throws IOException {
         logger.info("Starting 3a...");
         final List<String> lines = FileReader.readLines("/3a");
@@ -29,7 +28,7 @@ public class Assignment3 {
         logger.info("3a: " + mapMover.moveAndFind(0, 0, moves, Structure.TREE));
     }
 
-//    @Scheduled(initialDelay = 0, fixedDelay = Integer.MAX_VALUE)
+    //    @Scheduled(initialDelay = 0, fixedDelay = Integer.MAX_VALUE)
     public void run2() throws IOException {
         logger.info("Starting 3b...");
         final List<String> lines = FileReader.readLines("/3a");

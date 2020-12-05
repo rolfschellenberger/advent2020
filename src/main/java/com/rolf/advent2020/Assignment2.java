@@ -4,7 +4,7 @@ import com.rolf.advent2020.password.Password;
 import com.rolf.advent2020.password.Password2;
 import com.rolf.advent2020.password.PasswordParser;
 import com.rolf.advent2020.password.PasswordParser2;
-import com.rolf.advent2020.util.*;
+import com.rolf.advent2020.util.FileReader;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Component;
@@ -17,7 +17,7 @@ public class Assignment2 {
 
     private final Logger logger = LoggerFactory.getLogger(Assignment2.class);
 
-//    @Scheduled(initialDelay = 0, fixedDelay = Integer.MAX_VALUE)
+    //    @Scheduled(initialDelay = 0, fixedDelay = Integer.MAX_VALUE)
     public void run1() throws IOException {
         logger.info("Starting 2a...");
         final List<String> lines = FileReader.readLines("/2a");
@@ -28,7 +28,7 @@ public class Assignment2 {
         logger.info("2a: " + validCount);
     }
 
-//    @Scheduled(initialDelay = 0, fixedDelay = Integer.MAX_VALUE)
+    //    @Scheduled(initialDelay = 0, fixedDelay = Integer.MAX_VALUE)
     public void run2() throws IOException {
         logger.info("Starting 2b...");
         final List<String> lines = FileReader.readLines("/2a");
