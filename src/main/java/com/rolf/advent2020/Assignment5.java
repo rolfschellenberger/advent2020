@@ -6,7 +6,6 @@ import com.rolf.advent2020.boarding.SideParser;
 import com.rolf.advent2020.util.FileReader;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Component;
 
 import java.io.IOException;
@@ -19,7 +18,7 @@ public class Assignment5 {
 
     private final Logger logger = LoggerFactory.getLogger(Assignment5.class);
 
-    @Scheduled(initialDelay = 0, fixedDelay = Integer.MAX_VALUE)
+    //    @Scheduled(initialDelay = 0, fixedDelay = Integer.MAX_VALUE)
     public void run1() throws IOException {
         logger.info("Starting 5a...");
         final List<String> lines = FileReader.readLines("/5a");
@@ -31,7 +30,7 @@ public class Assignment5 {
         logger.info("5a: " + maxSeatId);
     }
 
-    @Scheduled(initialDelay = 0, fixedDelay = Integer.MAX_VALUE)
+    //    @Scheduled(initialDelay = 0, fixedDelay = Integer.MAX_VALUE)
     public void run2() throws IOException {
         logger.info("Starting 5b...");
         final List<String> lines = FileReader.readLines("/5a");

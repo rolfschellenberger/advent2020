@@ -1,6 +1,5 @@
 package com.rolf.advent2020.passport;
 
-import com.rolf.advent2020.passport.Passport;
 import org.apache.tomcat.util.buf.StringUtils;
 
 import java.util.ArrayList;
