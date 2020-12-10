@@ -3,7 +3,6 @@ package com.rolf.advent2020.day9;
 import com.rolf.advent2020.util.FileReader;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Component;
 
 import java.io.IOException;
@@ -14,7 +13,7 @@ public class Assignment9 {
 
     private final Logger logger = LoggerFactory.getLogger(Assignment9.class);
 
-    @Scheduled(initialDelay = 0, fixedDelay = Integer.MAX_VALUE)
+    //    @Scheduled(initialDelay = 0, fixedDelay = Integer.MAX_VALUE)
     public void run1() throws IOException {
         logger.info("Starting 9a...");
         final List<Long> lines = FileReader.readLongs("/9a");
@@ -23,7 +22,7 @@ public class Assignment9 {
         logger.info("9a: " + result);
     }
 
-    @Scheduled(initialDelay = 0, fixedDelay = Integer.MAX_VALUE)
+    //    @Scheduled(initialDelay = 0, fixedDelay = Integer.MAX_VALUE)
     public void run2() throws IOException {
         logger.info("Starting 9b...");
         final List<Long> lines = FileReader.readLongs("/9a");
