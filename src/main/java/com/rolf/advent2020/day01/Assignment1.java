@@ -1,4 +1,4 @@
-package com.rolf.advent2020.day10;
+package com.rolf.advent2020.day01;
 
 import com.rolf.advent2020.util.Assignment;
 import org.springframework.stereotype.Component;
@@ -7,9 +7,9 @@ import java.io.IOException;
 import java.util.List;
 
 @Component
-public class Assignment10 extends Assignment {
+public class Assignment1 extends Assignment {
 
-    private static final int DAY = 10;
+    private static final int DAY = 1;
 
     @Override
     protected int getDay() {
@@ -18,13 +18,13 @@ public class Assignment10 extends Assignment {
 
     @Override
     protected Object getResult1() throws IOException {
-        final List<Long> lines = readLongs();
-        return Sockets.multiplyOneThreeCount(lines);
+        final List<Long> numbers = readLongs();
+        return new Sum().findSum(numbers, 2, 2020);
     }
 
     @Override
     protected Object getResult2() throws IOException {
-        final List<Long> lines = readLongs();
-        return NodeParser.parseNodes(lines);
+        final List<Long> numbers = readLongs();
+        return new Sum().findSum(numbers, 3, 2020);
     }
 }
