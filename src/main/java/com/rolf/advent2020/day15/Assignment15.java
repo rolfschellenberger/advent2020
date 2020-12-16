@@ -3,7 +3,6 @@ package com.rolf.advent2020.day15;
 import com.rolf.advent2020.util.Assignment;
 import org.springframework.stereotype.Component;
 
-import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -11,11 +10,6 @@ import java.util.Map;
 public class Assignment15 extends Assignment {
 
     private static final int DAY = 15;
-
-    @Override
-    protected boolean isEnabled() {
-        return true;
-    }
 
     @Override
     protected int getDay() {
@@ -30,7 +24,7 @@ public class Assignment15 extends Assignment {
     }
 
     @Override
-    protected Object getResult2() throws IOException {
+    protected Object getResult2() {
         // 5,2,8,16,18,0,1
         final Map<Integer, Integer> numbers = creatStartMap(5, 2, 8, 16, 18, 0);
         return playGame(numbers, 1, 30000000);
