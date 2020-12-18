@@ -12,11 +12,6 @@ public class Assignment17 extends Assignment {
     private static final int DAY = 17;
 
     @Override
-    protected boolean isEnabled() {
-        return true;
-    }
-
-    @Override
     protected int getDay() {
         return DAY;
     }
