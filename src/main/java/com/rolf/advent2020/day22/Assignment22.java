@@ -13,11 +13,6 @@ public class Assignment22 extends Assignment {
     private static final int DAY = 22;
 
     @Override
-    protected boolean isEnabled() {
-        return true;
-    }
-
-    @Override
     protected int getDay() {
         return DAY;
     }
@@ -41,7 +36,7 @@ public class Assignment22 extends Assignment {
         final Hand p1 = Hand.from(player1);
         final Hand p2 = Hand.from(player2);
         final Game game = new Game(p1, p2);
-        while (game.move());
+        while (game.move()) ;
         return game.getWinnerScore();
     }
 
