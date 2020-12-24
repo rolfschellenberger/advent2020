@@ -11,14 +11,7 @@ import java.util.Arrays;
 @Component
 public class Assignment23 extends Assignment {
 
-    private final Logger logger = LoggerFactory.getLogger(Assignment23.class);
-
     private static final int DAY = 23;
-
-    @Override
-    protected boolean isEnabled() {
-        return true;
-    }
 
     @Override
     protected int getDay() {
