@@ -25,40 +25,34 @@ public class Assignment24 extends Assignment {
 
     @Override
     protected Object getResult1() throws IOException {
-        final List<String> lines = readLines();
-        if(true) return null;
-        final List<List<Direction>> moves = lines.stream()
-                .map(LineParser::parse)
-                .collect(Collectors.toList());
-        final Tile start = new Tile();
-        start.initialize(100);
-//        int i = 1;
-        for (final List<Direction> directions : moves) {
-//            System.out.println((i++) + ": " + directions);
-            start.walk(directions);
-        }
-
-        return start.getBlackCount();
+        final Floor floor = walkFloor();
+        return floor.getBlackCount();
     }
 
     @Override
     protected Object getResult2() throws IOException {
+        final Floor floor = walkFloor();
+
+        // Flip for 100 days
+        for (int day = 1; day <= 100; day++) {
+            final Set<Tile> tiles = floor.findTilesToFlip();
+            tiles.forEach(Tile::flip);
+        }
+
+        return floor.getBlackCount();
+    }
+
+    private Floor walkFloor() throws IOException {
         final List<String> lines = readLines();
         final List<List<Direction>> moves = lines.stream()
                 .map(LineParser::parse)
                 .collect(Collectors.toList());
-        final Tile start = new Tile();
-        start.initialize(1000);
+
+        final Floor floor = new Floor();
         for (final List<Direction> directions : moves) {
-            start.walk(directions);
+            final Tile tile = floor.findTile(directions);
+            tile.flip();
         }
-
-        for (int d = 1; d <= 100; d++) {
-            final Set<Tile> toFlip = start.findToFlip();
-            toFlip.forEach(Tile::flip);
-            System.out.println(d + ": " + start.getBlackCount());
-        }
-
-        return start.getBlackCount();
+        return floor;
     }
 }
