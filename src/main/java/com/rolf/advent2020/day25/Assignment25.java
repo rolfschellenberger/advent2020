@@ -13,11 +13,6 @@ public class Assignment25 extends Assignment {
     private static final long MOD = 20201227;
 
     @Override
-    protected boolean isEnabled() {
-        return true;
-    }
-
-    @Override
     protected int getDay() {
         return DAY;
     }

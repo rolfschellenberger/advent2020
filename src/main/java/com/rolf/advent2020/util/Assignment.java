@@ -12,7 +12,7 @@ public abstract class Assignment {
     private final Logger logger = LoggerFactory.getLogger(Assignment.class);
 
     protected boolean isEnabled() {
-        return false;
+        return true;
     }
 
     protected abstract int getDay();
